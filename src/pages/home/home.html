@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color = "primary">
+    <ion-title>Inicio</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bg">
+  
+ 
+  <img src="assets/imgs/ico.png" class="logo"/>
+	<ion-item>
+    <ion-label stacked>Email</ion-label>
+    <ion-input type="email"[(ngModel)]="usuario.email" placeholder="Email"></ion-input>
+	</ion-item>
+  
+  <ion-item>
+    <ion-label stacked>Password</ion-label>
+    <ion-input type="password"[(ngModel)]="usuario.password" placeholder="Password"></ion-input>
+	</ion-item>
+  
+  <ion-item>
+  <button ion-button  color ="secondary" (click)="register(usuario)">Registrarme</button>
+  <button ion-button  color ="secondary" (click)="login(usuario)">entrar</button>
+  <button ion-button  color ="secondary" (click)="forgot(usuario.email)">Recuperar.</button>
+  </ion-item>
+</ion-content>

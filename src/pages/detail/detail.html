@@ -1,0 +1,61 @@
+
+<ion-header>
+
+  <ion-navbar color ="primary">
+    <ion-title>Detalle del curso</ion-title>
+  </ion-navbar>
+
+</ion-header>
+  
+
+<ion-content *ngIf="show" class="bg">
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Cursos</ion-label>
+      <ion-input type="text" [(ngModel)]="note.title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Personas Max.</ion-label>
+      <ion-input type="number" [(ngModel)]="note.description"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>Personas Min</ion-label>
+        <ion-input type="number" [(ngModel)]="note.description1"></ion-input>
+      </ion-item>
+    <ion-item>
+      <ion-label floating>descripción</ion-label>
+      <ion-textarea [(ngModel)]="note.descripcion"></ion-textarea>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>Instructor</ion-label>
+        <ion-input type="text" [(ngModel)]="note.Instructor"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>Duración</ion-label>
+        <ion-input type="text" [(ngModel)]="note.duracion"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>fecha Inicio</ion-label>
+        <ion-input type="text" [(ngModel)]="note.fechaI"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>Lugar</ion-label>
+        <ion-input type="text" [(ngModel)]="note.lugar"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>Costo</ion-label>
+        <ion-input type="text" [(ngModel)]="note.costo"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>Observación</ion-label>
+        <ion-input type="text" [(ngModel)]="note.Observacion"></ion-input>
+    </ion-item>
+   
+  
+  </ion-list>
+  <div padding>
+  <button ion-button block color ="secondary"(click)="addNote()">Registrar</button>
+  <button *ngIf="show" ion-button block color ="danger"(click)="deleteNote()">eliminar</button>
+  </div>
+</ion-content>
